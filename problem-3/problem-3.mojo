@@ -1,25 +1,18 @@
-from python import Python
+from math import abs
 
-def makeGood(s: String):
-    py = Python.import_module("builtins")
-    result = str("")
+fn makeGood(s: String) -> String:
+    var result: String = str("")
 
-    i = 0
+    var i: Int = 0
     while i < len(s):
-        
-        if i < len(s) - 1 and py.abs(ord(s[i]) - ord(s[i + 1])) == 32:
-            
+        if i < len(s) - 1 and abs(ord(s[i]) - ord(s[i + 1])) == 32:
             i += 2
         else:
-           
             result = result + s[i]
             i += 1
+    return result
 
-    print(result)
-
-def main():
-    
-    input_str = "leEeetcode"
-    makeGood(input_str)
-    
-    #print("After making the string good:", result)
+fn main(): 
+    var input_str: String = "leEeetcode"
+    var result: String = makeGood(input_str)
+    print("After making the string good: ", result)
