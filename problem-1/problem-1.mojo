@@ -10,8 +10,8 @@ fn lengthOfLastWord(enterword: String):
   print(count)
 
 
-def main():
-  input_string = "Hello World" 
+fn main():
+  var input_string: String = "Hello World" 
   lengthOfLastWord(input_string)
 
 

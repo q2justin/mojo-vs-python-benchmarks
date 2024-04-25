@@ -1,11 +1,9 @@
-from python import Python
 
-def checkRecord(attendance_record: String):
-    py = Python.import_module("builtins")
-    attendance_record_str = attendance_record
+fn checkRecord(attendance_record: String) -> Bool:
+    var attendance_record_str: String = attendance_record
 
-    absent_count = 0
-    late_count = 0
+    var absent_count: Int = 0
+    var late_count: Int = 0
 
     for i in range(len(attendance_record_str)):
         
@@ -18,15 +16,14 @@ def checkRecord(attendance_record: String):
             late_count = 0
 
         if late_count >= 3 or absent_count >= 2:
-            print("The attendance record is not acceptable.")
             return False
-
-    print("The attendance record is acceptable.")
     return True
 
 
-def main():
-    checkRecord("PAALP")
-
+fn main():
+    if checkRecord("PAALP"):
+        print("The attendance record is acceptable.")
+    else:
+        print("The attendance record is not acceptable.")
 
 
