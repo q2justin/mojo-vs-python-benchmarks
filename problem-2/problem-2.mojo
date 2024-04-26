@@ -21,9 +21,15 @@ fn checkRecord(attendance_record: String) -> Bool:
 
 
 fn main():
-    if checkRecord("PAALP"):
-        print("The attendance record is acceptable.")
+  var leetcode_examples: List[Tuple[StringLiteral, Bool]] = List(("PPALLP", True), ("PPALLL", False))
+  for i in range(len(leetcode_examples)):
+    var example: Tuple[StringLiteral, Bool] = leetcode_examples[i]
+    var input_string: String = example.get[0, StringLiteral]()
+    var expected_result: Bool = example.get[1, Bool]()
+    print("Test case " + str(i+1) + ": " + input_string + " Expected Result: " + str(expected_result))
+    if checkRecord(input_string) == expected_result:
+      print("Test case " + str(i+1) + " passed")
     else:
-        print("The attendance record is not acceptable.")
+      print("Test case " + str(i+1) + " failed")
 
 
