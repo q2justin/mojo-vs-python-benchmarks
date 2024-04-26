@@ -6,10 +6,10 @@
 3. Mojo versions are now compiled versus ran against the interpreter. `mojo build` versus  `mojo run`
 
 ## Testing Environment
-Hardware: Macbook Pro, with M2 Max Processor, 64GB Ram
-Operating System: macOS Sonoma 14.3.1
-Python: Python v3.12
-Mojo: Mojo v24.2.1
+- Hardware: Macbook Pro, with M2 Max Processor, 64GB Ram
+- Operating System: macOS Sonoma 14.3.1
+- Python: Python v3.12
+- Mojo: Mojo v24.2.1
 
 ## Results
 
